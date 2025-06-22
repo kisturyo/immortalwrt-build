@@ -13,6 +13,12 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
+# Remove zh-cn language default
+sed -i 's/luci-i18n-ksmbd-zh-cn//' target/linux/mediatek/image/mt7981.mk
+sed -i 's/luci-i18n-usb-printer-zh-cn//' target/linux/mediatek/image/mt7981.mk
+sed -i 's/luci-i18n-ksmbd-zh-cn//' target/linux/mediatek/image/mt7986.mk
+sed -i 's/luci-i18n-usb-printer-zh-cn//' target/linux/mediatek/image/mt7986.mk
+
 # Add additional package
 mkdir package/additional
 git clone https://github.com/kiddin9/luci-theme-edge.git package/additional/luci-theme-edge
